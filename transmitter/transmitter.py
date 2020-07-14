@@ -32,7 +32,7 @@ class Transmitter():
         # Send every two seconds
         while (True):
             try:
-                r = requests.post(self.address+self.port_num,data = pload)
+                r = requests.post(self.address+":"+self.port_num,data = pload)
             except Exception as e:
                 print("Exception: ", e)
             
