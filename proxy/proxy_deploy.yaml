@@ -14,4 +14,4 @@ spec:
     - name: IP
       value: "11.0.0.152"
     - name: Port
-      value: "30567"
+      value: "8558"
