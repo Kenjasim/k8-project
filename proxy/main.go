@@ -44,6 +44,7 @@ func send(str string) {
 
 	//Try to form a connection
 	ip := os.Getenv("IP") + ":" + os.Getenv("PORT")
+	log.Println(ip)
 	conn, err := net.Dial("tcp", ip)
 
 	//Check for errors
