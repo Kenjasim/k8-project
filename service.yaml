@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: k8-ports
 spec:
+  type: NodePort
   selector:
     app: k8-proj
   ports:
     - protocol: TCP
       port: 6285
-      targetPort: 30488
