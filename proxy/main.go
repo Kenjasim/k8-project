@@ -43,7 +43,8 @@ func Proxy() {
 func send(str string) {
 
 	//Try to form a connection
-	conn, err := net.Dial("tcp", os.Getenv("IP")+os.Getenv("PORT"))
+	ip := os.Getenv("IP") + ":" + os.Getenv("PORT")
+	conn, err := net.Dial("tcp", ip)
 
 	//Check for errors
 	if err != nil {
