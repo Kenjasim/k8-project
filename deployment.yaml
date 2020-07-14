@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: k8_proj
+  name: k8-proj
   labels:
-    app: k8_proj
+    app: k8-proj
 spec:
   containers:
   - name: reciever
