@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: reciever-serv
+  name: reciever
   labels:
     app: reciever
 spec:
