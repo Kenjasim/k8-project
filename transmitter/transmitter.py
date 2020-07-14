@@ -13,8 +13,8 @@ class Transmitter():
         """
 
         # The address and port number to access
-        self.address = "http://localhost:"
-        self.port_num = "6285"
+        self.address = "http://11.0.0.213:"
+        self.port_num = "30488"
 
 
     def request(self):
