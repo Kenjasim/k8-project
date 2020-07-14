@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8_proj
+  labels:
+    app: k8_proj
+spec:
+  containers:
+  - name: reciever
+    image: kenjasim/reciever
+  - name: proxy
+    image: kenjasim/proxy
+    ports:
+    - containerPort: 6285
