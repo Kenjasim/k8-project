@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	"fmt"
+	"log"
 	"net"
 )
 
@@ -21,7 +21,7 @@ func connect(port string) {
 
 	//Check for errors
 	if err != nil {
-		fmt.Println(err)
+		log.Print(err)
 		return
 	}
 
@@ -34,7 +34,7 @@ func connect(port string) {
 
 		//Check for errors
 		if err != nil {
-			fmt.Println(err)
+			log.Print(err)
 			return
 		}
 
@@ -53,10 +53,10 @@ func handleRequest(conn net.Conn) {
 		// socket
 		netData, err := bufio.NewReader(conn).ReadString('\n')
 		if err != nil {
-			fmt.Println(err)
+			log.Print(err)
 			return
 		}
-		fmt.Println(netData)
+		log.Print(netData)
 		break
 	}
 	conn.Close()

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -22,7 +21,7 @@ func Proxy() {
 
 		//Check if there is an error here
 		if err := r.ParseForm(); err != nil {
-			fmt.Println(err)
+			log.Print(err)
 			return
 		}
 
@@ -47,7 +46,7 @@ func send(str string) {
 
 	//Check for errors
 	if err != nil {
-		fmt.Println(err)
+		log.Print(err)
 		return
 	}
 
@@ -56,7 +55,7 @@ func send(str string) {
 
 	//Check for errors
 	if err != nil {
-		fmt.Println(err)
+		log.Print(err)
 		return
 	}
 
@@ -66,7 +65,7 @@ func send(str string) {
 
 	//Check for errors
 	if err != nil {
-		fmt.Println(err)
+		log.Print(err)
 		return
 	}
 }
