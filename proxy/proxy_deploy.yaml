@@ -12,6 +12,6 @@ spec:
     - containerPort: 6285
     env:
     - name: IP
-      value: "11.0.0.152"
+      value: "10.99.164.218"
     - name: PORT
       value: "8558"
