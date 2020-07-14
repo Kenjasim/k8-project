@@ -1,6 +1,6 @@
 # Program to perform a simple HTTP request to a server every 2 seconds
 
-import requests, time
+import requests, time, os
 
 class Transmitter():
     """
@@ -13,8 +13,12 @@ class Transmitter():
         """
 
         # The address and port number to access
-        self.address = "http://11.0.0.32:"
-        self.port_num = "30488"
+        try:
+            self.address = "http://" + os.environ['TRANSMIT_IP']
+            self.port_num = os.environ['TRANSMIT_PORT']
+        except:
+            print("ERROR: Ensure you set the TRANSMIT_IP and TRANSMIT_PORT environment variables")
+            os._exit(1)
 
 
     def request(self):

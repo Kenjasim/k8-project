@@ -42,7 +42,7 @@ func Proxy() {
 func send(str string) {
 
 	//Try to form a connection
-	conn, err := net.Dial("tcp", "localhost:8558")
+	conn, err := net.Dial("tcp", os.Getenv("FOO"))
 
 	//Check for errors
 	if err != nil {

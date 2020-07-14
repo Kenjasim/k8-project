@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reciever-serv
+  labels:
+    app: reciever
+spec:
+  containers:
+  - name: reciever
+    image: kenjasim/reciever
+    ports:
+    - name: recieve
+      containerPort: 8558
+      
