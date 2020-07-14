@@ -16,6 +16,7 @@ class Transmitter():
         try:
             self.address = "http://" + os.environ['TRANSMIT_IP']
             self.port_num = os.environ['TRANSMIT_PORT']
+            self.ip = self.address+":"+self.port_num
         except:
             print("ERROR: Ensure you set the TRANSMIT_IP and TRANSMIT_PORT environment variables")
             os._exit(1)
@@ -32,7 +33,7 @@ class Transmitter():
         # Send every two seconds
         while (True):
             try:
-                r = requests.post(self.address+":"+self.port_num,data = pload)
+                r = requests.post(self.ip ,data = pload)
             except Exception as e:
                 print("Exception: ", e)
             
