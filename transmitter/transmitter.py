@@ -13,7 +13,7 @@ class Transmitter():
         """
 
         # The address and port number to access
-        self.address = "http://11.0.0.213:"
+        self.address = "http://11.0.0.32:"
         self.port_num = "30488"
 
 
