@@ -4,6 +4,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -42,7 +43,7 @@ func Proxy() {
 func send(str string) {
 
 	//Try to form a connection
-	conn, err := net.Dial("tcp", os.Getenv("FOO"))
+	conn, err := net.Dial("tcp", os.Getenv("IP")+os.Getenv("PORT"))
 
 	//Check for errors
 	if err != nil {
