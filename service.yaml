@@ -9,4 +9,4 @@ spec:
   ports:
     - protocol: TCP
       port: 6285
-      targetPort: 30488
+      nodePort: 30488
